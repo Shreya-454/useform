@@ -7,7 +7,7 @@ import Submit from './components/Submit';
 function App() {
   return (
     <div>
-      {/* <Form/> */}
+      <Form/>
       <Unregisster/>
       <Submit/>
     </div>

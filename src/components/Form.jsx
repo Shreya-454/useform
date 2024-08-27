@@ -7,10 +7,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
-    setValue,
-    getValues,
   } = useForm();
   const { onChange, onBlur, name, ref } = register('firstName'); 
   const onSubmit = (data) => {
@@ -21,16 +18,8 @@ const Form = () => {
 
   return (
     <div className="max-w-md mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Registration Form</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         {/* Name Input */}
-        <input 
-  onChange={onChange} // assign onChange event 
-  onBlur={onBlur} // assign onBlur event
-  name={name} // assign name prop
-  ref={ref} // assign ref prop
-/>
-{/* // same as above */}
 <input
             type="text"
             {...register('name', { required: 'Name is required' ,maxLength: 20 })}
@@ -61,7 +50,6 @@ const Form = () => {
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
           )}
         </div>
-        <input type="number" {...register("age", { min: 18, max: 99 })} />
         {/* Password Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">Password</label>
