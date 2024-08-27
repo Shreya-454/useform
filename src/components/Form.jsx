@@ -130,7 +130,7 @@ const Form = () => {
           onClick={handleUnregister}
           className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none"
         >
-          Unregister Password Field
+          Unregister Password
         </button>
       </div>
     </div>
